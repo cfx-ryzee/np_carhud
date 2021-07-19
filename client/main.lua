@@ -6,14 +6,14 @@ Citizen.CreateThread(function()
 		Citizen.Wait(0)
 		if veh then
 			sleep = false
-			local fuel = GetVehicleFuelLevel(veh)
+			local gasofa = GetVehicleFuelLevel(veh)
 			local speed = GetEntitySpeed(veh)*3.6 -- Value in KM/H
-			local gear = GetVehicleCurrentGear(veh)
+			local marcha = GetVehicleCurrentGear(veh)
 			SendNUIMessage({
 				isInCoche = veh;
 				speed = speed;
-				fuel = fuel;
-				gear = gear;
+				gasofa = gasofa;
+				marcha = marcha;
 			})
 		else
 			SendNUIMessage({
